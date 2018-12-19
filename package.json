@@ -1,0 +1,23 @@
+{
+  "name": "paywall-management",
+  "version": "1.0.0",
+  "description": "paywall payment management api",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fabriciofelipe/paywall-management.git"
+  },
+  "keywords": [],
+  "author": "EG team",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fabriciofelipe/paywall-management/issues"
+  },
+  "homepage": "https://github.com/fabriciofelipe/paywall-management#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
