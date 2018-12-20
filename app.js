@@ -1,18 +1,10 @@
-var express = require('express');
+const config = require('./config/env/development');
+const db = require('./config/db');
+const app = require('./config/express');
 
-var app = express();
-
-var route = require('./routes');  // importamos o arquivo
-
-
-
-app.use('/', route); // chamamos a rota
-
-
-
-app.listen(3000, function () {
-
+module.exports = app.listen(3000, () => {
+	db.connect(config.db);
   console.log('Example app listening on port 3000!');
-
 });
 
+module.exports.db = db;
