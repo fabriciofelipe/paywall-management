@@ -13,6 +13,6 @@ app.use(compression());
 
 //require('./middlewares')(app);
 
-app.use('/', require('../routes'));
+app.use('/', require('../modules/paywall/routes'));
 
 module.exports = app;
