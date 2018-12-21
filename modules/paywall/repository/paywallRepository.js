@@ -1,5 +1,5 @@
-var bluebird = require('bluebird');
-var moment = require('moment');
+//var bluebird = require('bluebird');
+//var moment = require('moment');
 
 class PaywallRepository {
     constructor() {
@@ -10,4 +10,4 @@ class PaywallRepository {
         this.model.findOne({ code: code }, {}, {}, {});
     };
 }
-module.exports = bluebird.promisifyAll(new AntigoCasDAO());
+//module.exports = bluebird.promisifyAll(new AntigoCasDAO());
