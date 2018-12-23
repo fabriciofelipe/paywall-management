@@ -17,6 +17,21 @@ class PaywallService {
           })
     }
 
+
+    saveUol (paywall) {
+        console.log(">>>>>>>>>>>>>>>>>> Service " + paywall)
+        return new Promise((resolve, reject) =>  {
+          this.paywallRepository.saveUol(paywall)
+              .then(result => {
+                  console.log("passei aqui >>>> " + result);
+                  resolve(result);
+              })
+              .catch(error => {
+                  reject(error)
+              })
+        })
+  }
+
 }
 
 module.exports = new PaywallService();

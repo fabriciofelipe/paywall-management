@@ -1,8 +1,3 @@
-
-
-
-//var bluebird = require('bluebird'); 
-
 class PaywallRepository {
     constructor() {
         this.model = require('../model/paywall');
@@ -10,10 +5,14 @@ class PaywallRepository {
 
     findUol(code) {
         console.log(">>>>>>>>>>>>>>>>>> PaywallRepository " + code)
-        return this.model.findOne({code:code});
-      //  console.log(">>>>>>>>>>>>>>" + JSON.stringify(test));
-      //  return test;
+        return this.model.findOne({ code: code });
+
+    };
+
+    saveUol(paywall) {
+        console.log(">>>>>>>>>>>>>>>>>> PaywallRepository " + paywall)
+        return this.model.create(paywall);
     };
 }
-//module.exports = bluebird.promisifyAll(new PaywallRepository());
+
 module.exports = new PaywallRepository();
