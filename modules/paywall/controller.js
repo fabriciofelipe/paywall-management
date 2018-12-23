@@ -6,7 +6,13 @@ class PaywallController {
     findUol(req, res) {
         console.log(">>>>>>>>>>>>>>>>>> Controller " + req.body.code)
         var code = req.body.code;
-        return this.paywallService.findUol(code)
+        this.paywallService.findUol(code)
+        .then(retorno =>{
+            return res.status(200).json({paywall: retorno})
+        })
+        .catch(error=>{
+            return res.status(500).json("erro")
+        })
     }
 }
 

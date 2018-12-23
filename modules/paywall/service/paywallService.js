@@ -9,7 +9,7 @@ class PaywallService {
             this.paywallRepository.findUol(code)
                 .then(result => {
                     console.log("passei aqui >>>> " + result);
-                    resolve(result.name);
+                    resolve(result);
                 })
                 .catch(error => {
                     reject(error)
