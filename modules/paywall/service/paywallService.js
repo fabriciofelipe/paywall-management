@@ -32,6 +32,20 @@ class PaywallService {
         })
   }
 
+  deleteUol (id) {
+    console.log(">>>>>>>>>>>>>>>>>> Service " + id)
+    return new Promise((resolve, reject) =>  {
+      this.paywallRepository.deleteUol(id)
+          .then(result => {
+              console.log("passei aqui >>>> " + result);
+              resolve(result);
+          })
+          .catch(error => {
+              reject(error)
+          })
+    })
+}
+
 }
 
 module.exports = new PaywallService();

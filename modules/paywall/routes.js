@@ -9,6 +9,8 @@ router.get('/uol', paywallController.findUol.bind(paywallController));
 
 router.post('/uol', paywallController.saveUol.bind(paywallController));
 
+router.delete('/uol', paywallController.deleteUol.bind(paywallController));
+
 
 module.exports = router;
 

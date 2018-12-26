@@ -13,6 +13,12 @@ class PaywallRepository {
         console.log(">>>>>>>>>>>>>>>>>> PaywallRepository " + paywall)
         return this.model.create(paywall);
     };
+
+    deleteUol(id) {
+        console.log(">>>>>>>>>>>>>>>>>> PaywallRepository " + id)
+        return this.model.deleteOne({ _id: id });
+
+    };
 }
 
 module.exports = new PaywallRepository();
